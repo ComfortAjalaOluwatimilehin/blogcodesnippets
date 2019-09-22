@@ -1,0 +1,1 @@
+<script src="https://gist-it.appspot.com/github.com/ComfortAjalaOluwatimilehin/blogcodesnippets/blob/master/{filename}.py" charset="UTF-8">
