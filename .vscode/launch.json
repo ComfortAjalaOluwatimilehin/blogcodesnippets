@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - RunEncap01Example",
+            "request": "launch",
+            "mainClass": "RunEncap01Example",
+            "projectName": "blogcodesnippets_14b85446"
+        }
+    ]
+}
