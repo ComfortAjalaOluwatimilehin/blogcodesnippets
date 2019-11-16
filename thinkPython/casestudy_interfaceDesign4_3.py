@@ -1,4 +1,5 @@
 from swampy.TurtleWorld import *
+from IPython.core.display import Math
 world = TurtleWorld()
 bob = Turtle()
 """
@@ -43,12 +44,47 @@ exterior angles of an n-sided regular polygon are 360/n degrees.
 """
 
 
-def square(bob, length, n):
+def polygon(bob, length, n):
+    angle = 360 / n
     for i in range(1, n + 1):
-        angle = 360 / n
         fd(bob, length)
         lt(bob, angle)
 
 
-#square(bob, 50, 15)
+#polygon(bob, 10, 15)
+
+"""
+Write a function called circle that takes a turtle, t, and radius, r, as parameters and
+that draws an approximate circle by invoking polygon with an appropriate length
+and number of sides. Test your function with a range of values of r.
+
+Hint: figure out the circumference of the circle and make sure that length * n =
+circumference.
+"""
+
+
+def circle(bob, radius):
+    diameter = 2 * radius
+    polygon(bob, radius, diameter)
+
+
+#circle(bob, 20)
+
+"""
+Make a more general version of circle called arc that takes an additional parameter
+angle, which determines what fraction of a circle to draw. angle is in units of degrees,
+so when angle=360, arc should draw a complete circle.
+
+"""
+
+
+def arc(bob, radius, angle):
+    diameter = 2 * radius
+    for i in range(1, diameter + 1):
+        fd(bob, radius)
+        lt(bob, angle / diameter)
+
+
+#arc(bob, 5, 76)
+
 wait_for_user()
