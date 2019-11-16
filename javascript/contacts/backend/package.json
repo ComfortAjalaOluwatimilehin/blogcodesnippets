@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@feathersjs/feathers": "^4.3.7",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "featherjs": "^0.1.0",
+    "mongodb": "^3.3.3",
+    "mongoose": "^5.7.5",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.1",
+    "@types/cors": "^2.8.6",
+    "@types/mongoose": "^5.5.21"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

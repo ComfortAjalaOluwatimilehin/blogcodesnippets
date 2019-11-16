@@ -85,6 +85,7 @@ def generate_grid(spacing, col_number):
 
 
 """
+run: generate_grid(4, 2)
 result: 
 +  -  -  -  -  +  -  -  -  -  +
 |              |              |
@@ -114,10 +115,10 @@ def generate_four_rows_for_columns(repfn, spacing, col_number):
     print_grid_head(spacing, col_number)
 
 
-generate_four_rows_for_columns(do_four_with_two_arg, 4, 4)
+#generate_four_rows_for_columns(do_four_with_two_arg, 4, 4)
 
 """
-
+run: generate_four_rows_for_columns(do_four_with_two_arg, 4, 4)
 result:
 
 +  -  -  -  - + -  -  -  - + -  -  -  - + -  -  -  - +

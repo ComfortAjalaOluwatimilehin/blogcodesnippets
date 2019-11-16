@@ -1,0 +1,22 @@
+"use strict";
+exports.__esModule = true;
+var feathers_1 = require("@feathersjs/feathers");
+var counterservice_1 = require("./counterservice");
+var cors = require("cors");
+var mongoose = require("mongoose");
+var express = require("@feathersjs/express");
+var morgan = require("morgan");
+var app = express(feathers_1["default"]());
+var port = 3000;
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(morgan('combined'));
+app.use(cors());
+app.use(express.errorHandler());
+app.configure(express.rest());
+app.use("/counters", counterservice_1.CounterService);
+mongoose.connect("mongodb://localhost:27017/counter", { useUnifiedTopology: true });
+var server = app.listen(port);
+server.on("listening", function () {
+    console.log("server listening on PORT: " + port);
+});
