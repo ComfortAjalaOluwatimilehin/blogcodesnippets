@@ -85,6 +85,24 @@ def arc(bob, radius, angle):
         lt(bob, angle / diameter)
 
 
-#arc(bob, 5, 76)
+#arc(bob, 5, 180)
+"""
+Write an appropriately general set of functions that can draw flowers
 
+"""
+
+
+def arc(bob, radius, angle, dir):
+    diameter = 2 * radius
+    for i in range(1, diameter + 1):
+        dir(bob, radius)
+        lt(bob, angle / diameter)
+
+
+def petal(bob, radius):
+    arc(bob, radius, 60, fd)
+    arc(bob, radius, 60, bk)
+
+
+petal(bob,  5)
 wait_for_user()
