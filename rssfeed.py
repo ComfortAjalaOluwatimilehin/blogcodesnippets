@@ -19,6 +19,9 @@ class Item:
         self.description = description
         self.link = link
 
+    def openbrowser(self) -> None:
+        webbrowser.open_new_tab(self.link)
+
 
 def geturlfromuser() -> str:
     userinput: str = input("Type in a valid url ")
@@ -75,7 +78,7 @@ def setupui(items: List[Item]) -> None:
         label = tkinter.Label(top, text=item.title)
 
         button = tkinter.Button(top, text="Open Post",
-                                command=partial(clickpost, item))
+                                command=item.openbrowser)
         description = tkinter.Message(top, text=item.description)
         label.pack()
         description.pack()
